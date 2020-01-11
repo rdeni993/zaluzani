@@ -1,0 +1,383 @@
+/**
+*
+*   Because STYLE.css is main WP Stylesheet 
+*   This theme will use theme.css or this
+*   css file as theme main css....
+*
+*/
+
+/** Make Body Grey **/
+body, html 
+{
+    background: #fff;
+}
+
+/** Set Main Font **/
+.main-font
+{
+    font-family: "Roboto", sans-serif;
+}
+
+.pacifico
+{
+    font-family: "Pacifico";
+}
+
+/** Container Is Full sized **/
+.container-fluid 
+{
+    padding: 0;
+}
+
+/** Front Page **/
+.front-page 
+{
+    width: 100%;
+    height: 800px;
+    background: url("../img/academic3.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 2px #888;
+}
+
+/** Navigation **/
+.navigation
+{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+
+.menu
+{
+    width: 100%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.menu ul 
+{
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.menu ul li 
+{
+    display: inline;
+    list-style-type: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.menu ul li a 
+{
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+}
+
+/** Logo && Text **/
+.front-details
+{
+    width: 100%;
+    height: 500px;
+    float: left;
+    margin-top: 110px;
+    text-align: center;
+}
+
+.front-details h1 
+{
+    margin: 20px 0;
+    color: #fff;
+}
+
+/** Search Form **/
+.screen-reader-text 
+{
+    display: none!important;
+}
+
+.search-box
+{
+    width: 700px;
+    margin: auto;
+}
+
+.search-box input
+{
+    width: 550px;
+    float: left;
+    border: none;
+    padding: 30px;
+    margin: 0;
+
+}
+
+.search-box input[type=text]
+{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#searchsubmit 
+{
+    width: 150px;
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/** Disable row **/
+.row 
+{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+/** post **/
+.blog-posts
+{
+    width: 80%;
+    margin: 80px 0;
+    padding: 0 20px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+}
+
+.blog-posts article 
+{
+    width: 100%;
+    float: left;
+    margin: 50px 0;
+}
+
+.blog-posts article:first-child 
+{
+    margin-top: 0;
+}
+
+.blog-posts article .article-featured
+{
+    width: 100px;
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    border: 2px solid rgb(47, 121, 63);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #aaa;
+}
+
+
+.blog-posts article .article-featured > div:first-child 
+{
+    font-size: 2.5em;
+    background: rgb(41, 39, 39);
+    padding: 20px;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.blog-posts article .article-featured > div:last-child 
+{
+    font-size: 1em;
+    background: rgb(75, 73, 73);
+    padding: 15px;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.blog-posts article .article-content
+{
+    width: calc(100% - 150px);
+    margin-left: 50px;
+    float: left;
+    padding: 0px!important;
+}
+
+.article-content h1
+{
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.article-content a 
+{
+    text-decoration: none;
+    color: #000;
+}
+
+.read-more 
+{
+    color: rgb(211, 73, 73)!important;
+}
+
+.article-content > div 
+{
+    text-align: justify;
+    color: rgb(95, 90, 90);
+}
+
+.article-content img 
+{
+    width: 100%;
+    max-height: 300px;
+    border: 3px solid #e7e7e7;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #aaa;
+    margin-bottom: 25px;
+}
+
+/** Sidebar **/
+.sidebar 
+{
+    width: 80%;
+    margin: 80px 0;
+    padding: 0 0px;
+    padding-bottom: 100px;
+    text-align: left;
+}
+
+.sidebar article
+{
+    margin: 100px 0;
+    padding: 0;
+    background-image: url("../img/pin_task.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.sidebar article ul  
+{
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.sidebar article:first-child
+{
+    margin-top: 0;
+}
+
+.sidebar article h1 
+{
+    color: #000;
+    font-weight: bolder;
+}
+
+.sidebar article div ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+
+.sidebar article div ul li a 
+{
+    /*color: rgb(95, 90, 90);*/
+    color: rgb(71, 91, 207);
+}
+
+
+.sidebar article div ul li:before
+{
+    margin-right: 10px;
+    padding: 0;
+}
+
+
+/** Footer **/
+footer 
+{
+    width: 100%;
+    background: rgb(26, 24, 24);
+    color: #fff;
+}
+
+.footer
+{
+    width: 80%;
+    margin: 100px 10%;
+    padding-top: 50px;
+    margin-bottom: 0;
+}
+
+.footer article 
+{
+    margin: 35px 0;
+    text-align: justify;
+    padding: 0 30px;    
+}
+
+
+.footer article:first-child 
+{
+    margin-top: 0;
+}
+
+.footer ul 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li 
+{
+    margin: 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: justify;
+}
+
+.footer ul li a
+{
+    color: #fff;
+    font-family: "Roboto";
+    text-decoration: none;
+}
+
+/** Footer Search **/
+.footer article input[type='submit'] 
+{
+    background: none;
+    color: #fff;
+    display: block!important;
+    border: 1px solid #fff;
+    border-radius: 0!important;
+    background: rgb(87, 84, 84);
+    color: #fff;
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.footer article input[type='text']
+{
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: none;
+    float: left;
+    padding: 15px;
+    width: 100%;
+} 
+
+/**
+======================                ========================
+====================== Mobile Version ========================
+======================                ========================
+**/
+
+.mobile{ display: none; }
