@@ -8,7 +8,12 @@
 <div class="front-page">
     <!-- Navigation --> 
     <div class="navigation">
-        <div class="mobile navigation-text main-font"><h1>Universitiy</h1><button id="menu-button">Menu</button></div>
+        <div class="mobile navigation-text main-font">
+            <a href="<?php echo bloginfo('url'); ?>">
+                <h1>Universitiy</h1>
+                <button id="menu-button"><span class="far fa-compass"></span></button>
+            </a>
+        </div>
         <div class="menu" id="mobile-main-menu">
             <?php wp_nav_menu(['theme_location' => 'main_menu']); ?>
         </div>
@@ -17,7 +22,7 @@
     <div class="front-details main-font">
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo Image" />
         <br />
-        <h1 class="pacifico">Universitiy of Jerusalem</h1>
+        <h1 class="pacifico"><?php bloginfo('name') ?></h1>
         <br />
         <div class="search-box">
             <?php get_search_form(); ?>
@@ -65,7 +70,7 @@
                         <?php $cat = get_categories(); ?>
                         <ul>
                             <?php foreach( $cat as $category ): ?>
-                                <li><a href="<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>
+                                <li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>

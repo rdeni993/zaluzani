@@ -1,0 +1,109 @@
+/** Wordpress Bootstrap Menu v1.0.0 */
+.bootstrap-wp-nav
+{
+    width: 100%;
+    background: rgb(65, 62, 62);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+}
+
+.bootstrap-wp-nav div 
+{
+    float: left;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.bootstrap-wp-nav > .navbar-title
+{
+    padding-right: 50px;
+    width: 25%;
+    font-size: 1.23em;
+}
+
+.bootstrap-wp-nav > .navbar-title img 
+{
+    height: 50px;
+    margin-left: 12px;
+}
+
+.bootstrap-wp-nav > .navbar-title h1 
+{
+    display: inline;
+    vertical-align: middle;
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+.bootstrap-wp-nav > .navbar-content
+{
+    width: 46%;
+    width: calc( 100% - 25% - 250px );
+}
+
+.bootstrap-wp-nav > .navbar-content ul
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.bootstrap-wp-nav > .navbar-content ul li 
+{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 20px;
+    height: 100%;
+}
+
+
+.bootstrap-wp-nav > .navbar-content ul li a 
+{
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.bootstrap-wp-nav > .navbar-search 
+{
+    width: 250px;
+    padding: 0;
+    background: none;
+}
+
+.bootstrap-wp-nav > .navbar-search input 
+{
+    margin: 0;
+    padding: 10px 0;
+    margin: 0;
+    border: 1px solid #fff;
+}
+
+.bootstrap-wp-nav > .navbar-search input[type='text']
+{
+    width: 200px;
+    float: left;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+} 
+
+.bootstrap-wp-nav > .navbar-search button
+{
+    box-shadow: none;
+    outline: none;
+    border-radius: 0px!important;
+    background: none;
+    color: #fff;
+    height: auto;
+    padding: 12px 10px!important;
+    width: auto!important;
+    border: 1px solid #fff;
+}

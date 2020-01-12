@@ -11,5 +11,12 @@ $("#menu-button").click(function(){
 /** Wordpress Calendar Widget */
 $("#wp-calendar").attr("class", "table");
 
+/** Display Hidden Menu */
+$("#boot-nav-wp").click(function(){
+
+    // Toogle Main Menu
+    $(".bootstrap-wp-nav > .navbar-content").toggle("slow");
+
+});
 
 });

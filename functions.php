@@ -20,11 +20,19 @@ function load_css()
     // Load Mobile Version
     wp_register_style('mobile', get_template_directory_uri() . '/css/mobile.css');
 
+    // Load Bootstrap Nav
+    wp_register_style('navbar', get_template_directory_uri() . '/css/bootstrap-navbar.css');
+
+    // Load Bootstrap Nav Mobile
+    wp_register_style('navbar.mobile', get_template_directory_uri() . '/css/bootstrap-navbar-mobile.css');
+
     // Enqueue All Css Scripts
     wp_enqueue_style('font');
     wp_enqueue_style('bootstrap.min');
     wp_enqueue_style('theme');
     wp_enqueue_style('mobile');
+    wp_enqueue_style('navbar');
+    wp_enqueue_style('navbar.mobile');
 
 }
 

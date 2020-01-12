@@ -79,6 +79,10 @@
                         <h1>Dokumenti</h1>
                         <?php wp_nav_menu(['theme_location' => 'docs_menu', 'menu_class' => 'docs']); ?>
                     </article>
+                    <!-- Osoblje -->
+                    <article>
+                        <h1>Osoblje</h1>
+                    </article>
                     <!-- Sidebar -->
                     <?php get_sidebar(); ?>
             </div>

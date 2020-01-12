@@ -7,5 +7,8 @@
     <meta name="author" content="denis_r_home@yahoo.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Load Font Awsome -->
+    <script src="https://kit.fontawesome.com/00ff6ecef0.js" crossorigin="anonymous"></script>
+
 </head>
 <body <?php body_class(); ?>>

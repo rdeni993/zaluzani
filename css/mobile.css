@@ -88,7 +88,7 @@
 .search-box 
 {
     width: 80%;
-    margin: 100px 10%;
+    margin: 50px 10%;
 }
 
 .search-box input[type=text]
@@ -136,6 +136,12 @@
     float: left;
 }
 
+
+.blog-posts article  img 
+{
+    height: 200px;
+}
+
 .article-content
 {
     margin: 0!important;
@@ -170,7 +176,7 @@
     padding: 10px;
     text-align: center;
     text-transform: uppercase;
-    border: 1px solid rgb(51, 48, 48);
+    box-shadow: -2px -2px 4px #888;
     color: rgb(43, 41, 41);
     margin: 30px 0;
 }

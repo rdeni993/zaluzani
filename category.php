@@ -42,22 +42,14 @@
 
                 <!-- Content -->
                 <div class="text-justify row-main-post-content">
-                    <?php the_content(); ?>
-                </div>
-
-                <!-- Tags -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title"><strong>Tagovi</strong></div>
-                        <div class="card-text"><em><?php the_tags(''); ?></em></div>
-                    </div>
+                    <?php the_excerpt(); ?>
+                    <hr />
                 </div>
 
                 <?php endwhile; ?>
             <?php else: ?>
                 <p>Post not found!</p>
             <?php endif; ?>
-
             </div>
         </div>
         <div class="col-sm-4">

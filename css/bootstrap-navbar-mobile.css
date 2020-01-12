@@ -1,0 +1,105 @@
+/** Bootstrap navbar wordpress **/ 
+@media only screen and (max-width: 1024px)
+{
+    .bootstrap-wp-nav 
+    {
+        padding: 0!important;
+        margin: 0!important;
+    }
+    .bootstrap-wp-nav div 
+    {
+        width: 100%!important;
+        margin: 0!important;
+        padding: 0!important;
+    }
+
+    .bootstrap-wp-nav > .navbar-title
+    {
+        padding: 10px 0!important;
+    }
+
+    .bootstrap-wp-nav > .navbar-title img 
+    {
+        height: 50px;
+        width: 50px;
+        margin: 5px;
+        padding: 0;
+        float: left;
+    }
+    .bootstrap-wp-nav > .navbar-title h1 
+    {
+        width: calc( 100% - 60px - 85px )!important;
+        padding: 0;
+        margin: 10px 0;
+        margin-left: 15px;
+        float: left;
+        font-size: 30px;
+    }
+    .bootstrap-wp-nav > .navbar-title button  
+    {
+        float: left;
+        margin: 0 0;
+        width: 55px;
+        padding: 0;
+        display: block;
+        height: 40px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        text-align: right;
+        font-size: 2em;
+        color: #fff;
+        background: none;
+        cursor: pointer;
+    }
+
+    .bootstrap-wp-nav > .navbar-content
+    {
+        display: none;
+    }
+
+    .bootstrap-wp-nav > .navbar-content ul
+    {
+        margin-top: 15px;
+        height: auto;
+        background: rgb(94, 88, 88);
+        text-align: left;
+        border-top: 2px solid #fff;
+    }
+
+    .bootstrap-wp-nav > .navbar-content ul li 
+    {
+        display: block;
+        margin: 0px 0;
+        padding: 17px 0;
+        height: auto;
+        box-shadow: 2px 2px 2px #fff;
+    }
+    .bootstrap-wp-nav > .navbar-content ul li:hover 
+    {
+        background: rgb(129, 123, 123);
+    }
+
+    .bootstrap-wp-nav > .navbar-content ul li a 
+    {
+        margin-left: 12px;
+    }
+
+    .bootstrap-wp-nav > .navbar-search 
+    {
+        display: none;
+    }
+
+
+    /** post **/
+    .row-main-post
+    {
+        padding: 0 0;
+    }
+
+    .row-main-post img 
+    {
+        height: 250px;
+    }
+
+}
