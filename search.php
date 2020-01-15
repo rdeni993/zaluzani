@@ -2,94 +2,57 @@
 <?php get_header(); ?>
 
 <!-- Front Page -->
-<!-- Classic Bootstrap navigation -->
-<nav class="bootstrap-wp-nav">
-    <div class="navbar-title">
-        <img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>" alt="menu-logo" /> 
-        <a href="<?php echo bloginfo('url'); ?>"><h1 class="pacifico"><?php bloginfo('name'); ?></h1></a>
-        <button id="boot-nav-wp" class="mobile"><span class="far fa-compass"></span></button>
+
+<div class="container-fluid">
+
+<!-- Load Navigation -->
+<?php get_template_part('template/navigation'); ?>
+<!-- End Navigation -->
+
+<!-- Body -->
+<div class="row container-content">
+    <!-- Main Posts -->
+    <div class="col-sm-9 blog-posts">
+
+        <?php if( have_posts() ): ?>
+            <?php while( have_posts() ): the_post(); ?>
+            <!-- Display Post Snippet -->
+            <div class="blog-post-snippet">
+                <div class="post-date">
+                    <ul class="roboto">
+                        <li><h1><strong><?php echo get_the_date("d"); ?></strong></h1></li>
+                        <li><?php echo get_the_date("M") . ", " . get_the_date("Y"); ?></li>
+                    </ul>
+                </div>
+                <div class="post-content roboto">
+                    <!-- Thumbnail -->
+                    <?php if( has_post_thumbnail() ): ?>
+                        <?php the_post_thumbnail(); ?>
+                    <?php endif; ?>
+                    <!-- EOF Thumbnail -->
+
+                    <!-- Post -->
+                    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                    <div class="post-excerpt text-justify"><?php the_excerpt(); ?></div>
+                    <a class="btn btn-link" href="<?php the_permalink(); ?>">Pročitaj više</a>
+                    <!-- End Of Post -->
+
+                </div>
+            </div>
+            <!-- End of Snippet -->
+            <?php  endwhile; ?>
+        <?php endif; ?>
+
     </div>
-    <div class="navbar-content text-right"><?php wp_nav_menu(['theme_location' => 'main_menu']); ?></div>
-    <div class="navbar-search"><?php get_search_form(); ?></div>
-</nav>
-
-<!-- Container -->
-<div class="container-fluid dark-version">
-
-<!-- Main Font -->
-<div class="main-post main-font">
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="row-main-post">
-
-            <?php if( have_posts() ): ?>
-                <?php while( have_posts() ): the_post(); ?>
-
-                <!-- Thumbnail -->
-                <?php if( has_post_thumbnail() ): ?>
-                    <?php the_post_thumbnail(); ?>
-                <?php endif; ?>
-
-                <!-- Title -->
-                <h1><b><?php the_title(); ?></b></h1>
-
-                <!-- Description -->
-                <ul class="row-main-post-description text-muted text-uppercase">
-                    <li><span><?php the_date(); ?> <?php the_time('H:m'); ?></span></li>
-                    <li><?php the_author(); ?></li>
-                    <li><?php the_category(', '); ?></li>
-                </ul>
-
-                <!-- Content -->
-                <div class="text-justify row-main-post-content">
-                    <?php the_content(); ?>
-                </div>
-
-                <!-- Tags -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title"><strong>Tagovi</strong></div>
-                        <div class="card-text"><em><?php the_tags(''); ?></em></div>
-                    </div>
-                </div>
-
-                <?php endwhile; ?>
-            <?php else: ?>
-                <p>Post not found!</p>
-            <?php endif; ?>
-
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="sidebar main-font">
-                    <!-- Archive -->
-                    <article>
-                        <h1>Arhiva</h1>
-                        <div>
-                            <?php $cat = get_categories(); ?>
-                            <ul>
-                                <?php foreach( $cat as $category ): ?>
-                                    <li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    </article>
-                    <!-- Meni -->
-                    <article>
-                        <h1>Dokumenti</h1>
-                        <?php wp_nav_menu(['theme_location' => 'docs_menu', 'menu_class' => 'docs']); ?>
-                    </article>
-                    <!-- Sidebar -->
-                    <?php get_sidebar(); ?>
-            </div>
-        </div>
+    <div class="col-sm-3 main-sidebar">
+        <!-- Load SidebarTemplate -->
+        <?php get_template_part('template/main_sidebar'); ?>
+        <!-- EndSidebarTempalate -->
     </div>
 </div>
-
-<!-- EOF container -->
-</div>
+<!-- EndBody -->
 
 <!-- End Front Page -->
-
+</div>
 <!-- Wordpress Footer -->
 <?php get_footer(); ?>

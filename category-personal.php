@@ -17,14 +17,9 @@
         <?php if( have_posts() ): ?>
             <?php while( have_posts() ): the_post(); ?>
             <!-- Display Post Snippet -->
-            <div class="blog-post-snippet">
-                <div class="post-date">
-                    <ul class="roboto">
-                        <li><h1><strong><?php echo get_the_date("d"); ?></strong></h1></li>
-                        <li><?php echo get_the_date("M") . ", " . get_the_date("Y"); ?></li>
-                    </ul>
-                </div>
+            <div class="blog-post-snippet page-personal">
                 <div class="post-content roboto">
+
                     <!-- Thumbnail -->
                     <?php if( has_post_thumbnail() ): ?>
                         <?php the_post_thumbnail(); ?>
@@ -33,8 +28,8 @@
 
                     <!-- Post -->
                     <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                    <div class="post-excerpt text-justify"><?php the_excerpt(); ?></div>
-                    <a class="btn btn-link" href="<?php the_permalink(); ?>">Pročitaj više</a>
+
+                    <div class="post-excerpt text-justify"><?php the_content(); ?></div>
                     <!-- End Of Post -->
 
                 </div>

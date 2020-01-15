@@ -4,7 +4,6 @@
 /** This is File Where I can create */
 /** all important functions for my Theme */
 
-
 /** Register all CSS files */
 function load_css()
 {
@@ -54,10 +53,11 @@ function overwrite_jquery()
 function load_js()
 {
     // Load Bootstrap
-    wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
+      wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
 
     // Load MyScript
     wp_register_script('theme-script', get_template_directory_uri() . '/js/theme-script.js' );
+
 
     // Enqueue All Js Scripts
     wp_enqueue_script('bootstrap');
@@ -82,7 +82,7 @@ function init_my_widget()
         'name' => "Main Sidebar",
         'id'   => 'sidebar-1',
         'class' => 'sidebar_widgets',
-        'before_widget' => '<article>',
+        'before_widget' => '<article class="text-justify roboto">',
         'after_widget' => '</article>',
         'before_title' => '<h1>',
         'after_title' => '</h1>'
@@ -123,11 +123,18 @@ function init_my_widget()
 
 }
 
+/** Register Bootstrap NavWalker */
+function register_navwalker()
+{
+    require_once('bs4navwalker.php');
+}
+
 /** Add Action */
 add_action('wp_enqueue_scripts', 'load_css'); // Load CSS
 add_action('wp_enqueue_scripts', 'overwrite_jquery'); // Load jQuery
 add_action('wp_enqueue_scripts', 'load_js'); //Load Javascript
 add_action('widgets_init', 'init_my_widget'); // Init Widget
+add_action('after_setup_theme', 'register_navwalker');
 
 /** Add Theme Support */
 add_theme_support('menus');
