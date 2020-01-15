@@ -129,12 +129,24 @@ function register_navwalker()
     require_once('bs4navwalker.php');
 }
 
+/** Display Just Last ten posts on homepage */
+function display_ten_posts($query)
+{
+    if( is_home() ){ 
+        $query->set( 'posts_per_page', 10 ); 
+    }
+    if( is_category() ){
+        $query->set( 'posts_per_page', 100 );
+    }
+}
+
 /** Add Action */
 add_action('wp_enqueue_scripts', 'load_css'); // Load CSS
 add_action('wp_enqueue_scripts', 'overwrite_jquery'); // Load jQuery
 add_action('wp_enqueue_scripts', 'load_js'); //Load Javascript
 add_action('widgets_init', 'init_my_widget'); // Init Widget
-add_action('after_setup_theme', 'register_navwalker');
+add_action('after_setup_theme', 'register_navwalker'); // Display Bootstrap navigation
+add_action('pre_get_posts', 'display_ten_posts');// Display Just 10 posts on homepage
 
 /** Add Theme Support */
 add_theme_support('menus');

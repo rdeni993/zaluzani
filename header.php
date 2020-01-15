@@ -3,6 +3,7 @@
 <head>
     <!-- Basic Wordpress header menu -->
     <?php wp_head(); ?>
+    <title><?php bloginfo('name'); ?></title>
     <!-- Custom Theme Header -->
     <meta name="author" content="denis_r_home@yahoo.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
